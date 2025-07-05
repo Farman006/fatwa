@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Sunni Hanfi Fatwas</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jameel+Noori+Nastaleeq&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'AA Sameer Zikran';
+      src: url('https://cdn.jsdelivr.net/gh/fonts4arabs/arabic-fonts/AA%20Sameer%20Zikran%20Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+      color: #333;
+      transition: all 0.3s ease;
+    }
+
+    body.dark {
+      background: linear-gradient(to right, #1f1f1f, #111);
+      color: #ddd;
+    }
+
+    .header {
+      background: linear-gradient(to right, #5a62d4, #4b2bb4);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+
+    .theme-toggle {
+      font-size: 1.2rem;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    .about-container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    body.dark .about-container {
+      background: #2c2c3a;
+      color: #eee;
+    }
+
+    .about-container h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #4b2bb4;
+    }
+
+    body.dark .about-container h1 {
+      color: #9d84ff;
+    }
+
+    .about-container section {
+      margin-bottom: 2rem;
+    }
+
+    .about-container h2 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    body.dark .about-container h2 {
+      color: #ccc;
+    }
+
+    .about-container p {
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    [lang="ur"] p {
+      font-family: 'Jameel Noori Nastaleeq', serif;
+      font-size: 1.2rem;
+    }
+
+    [lang="ar"] p {
+      font-family: 'AA Sameer Zikran', serif;
+      font-size: 1.2rem;
+    }
+
+    .footer {
+      text-align: center;
+      background: #4b2bb4;
+      color: white;
+      padding: 1rem;
+      margin-top: 3rem;
+      border-radius: 0 0 1rem 1rem;
+    }
+
+    body.dark .footer {
+      background: #222;
+    }
+  </style>
+</head>
+<body class="light">
+  <header class="header">
+    <div class="logo">Sunni Hanfi Fatawas</div>
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+  </header>
+
+  <main class="about-container">
+    <h1>About Us</h1>
+
+    <!-- English -->
+    <section>
+      <h2>English</h2>
+      <p>
+        Sunni Hanfi Fatawas is a platform dedicated to spreading authentic Islamic knowledge based on the Qur’an, Sunnah, and Hanafi fiqh. Our aim is to provide clear, accessible answers to daily religious matters with full references from classical books and authentic scholars.
+      </p>
+    </section>
+
+    <!-- Urdu -->
+    <section dir="rtl" lang="ur">
+      <h2>اردو</h2>
+      <p>
+        سنی حنفی فتاویٰ ایک ایسا پلیٹ فارم ہے جو قرآن، سنت اور فقہ حنفی کی روشنی میں مستند اسلامی علم کو عام کرنے کے لیے وقف ہے۔ ہمارا مقصد روزمرہ دینی مسائل کے واضح اور حوالہ جات سے مزین جوابات فراہم کرنا ہے۔
+      </p>
+    </section>
+
+    <!-- Arabic -->
+    <section dir="rtl" lang="ar">
+      <h2> العربية</h2>
+      <p>
+        فتاوى السنّة الحنفية هو موقع يهدف إلى نشر العلم الإسلامي الصحيح المستند إلى القرآن والسنة وفقه المذهب الحنفي، مع توفير أجوبة موثوقة للمسائل اليومية من مصادر أصيلة.
+      </p>
+    </section>
+
+    <!-- Roman Urdu -->
+    <section>
+      <h2>Roman Urdu</h2>
+      <p>
+        Sunni Hanfi Fatawas ek platform hai jo Qur’an, Sunnat aur Hanafi fiqh ki roshni mein asli Islami ilm ko aam karne ke liye hai. Hum aapko rozmarrah ke masail ke saaf aur daleel se bharpoor jawab dene ki koshish karte hain.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    &copy; 2025 Sunni Hanfi Fatawas. All rights reserved.
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById("theme-toggle");
+    const body = document.body;
+    themeToggle.addEventListener("click", () => {
+      body.classList.toggle("dark");
+    });
+  </script>
+</body>
+</html>

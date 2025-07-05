@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Sunni Hanfi Fatwas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4b2bb4;
+      --primary-dark: #3e239e;
+      --bg-light: #ffffff;
+      --bg-dark: #2c2c3a;
+      --text-light: #333;
+      --text-dark: #eee;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+      color: var(--text-light);
+      transition: 0.3s ease;
+      min-height: 100vh;
+    }
+
+    body.dark {
+      background: linear-gradient(to right, #1f1f1f, #111);
+      color: var(--text-dark);
+    }
+
+    .header {
+      background: linear-gradient(to right, var(--primary), var(--primary-dark));
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+
+    .theme-toggle {
+      font-size: 1.2rem;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    .contact-container {
+      max-width: 600px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: var(--bg-light);
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    body.dark .contact-container {
+      background: var(--bg-dark);
+      box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+    }
+
+    .contact-container h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--primary);
+    }
+
+    body.dark .contact-container h1 {
+      color: #9d84ff;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.6rem 1rem;
+      font-size: 1rem;
+      border-radius: 0.6rem;
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+      color: var(--text-light);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    body.dark input,
+    body.dark textarea {
+      background: #3b3b4a;
+      border: 1px solid #666;
+      color: white;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 0.8rem;
+      border: none;
+      background: var(--primary);
+      color: white;
+      font-size: 1rem;
+      border-radius: 0.6rem;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background: var(--primary-dark);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+      background: var(--primary);
+      color: white;
+      border-radius: 0 0 1rem 1rem;
+    }
+
+    body.dark .footer {
+      background: #222;
+      color: #ddd;
+    }
+  </style>
+</head>
+<body class="light">
+  <header class="header">
+    <div class="logo">Sunni Hanfi Fatawas</div>
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+  </header>
+
+  <main class="contact-container">
+    <h1>📬 Contact Us</h1>
+    <form>
+      <div class="form-group">
+        <label for="name">Your Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" placeholder="Type your message here..." required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </main>
+
+  <footer class="footer">
+    &copy; 2025 Sunni Hanfi Fatwas. All rights reserved.
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+toggle.addEventListener('click', () => {
+  body.classList.toggle('dark');
+  // icon remains unchanged
+});
+
+  </script>
+</body>
+</html>

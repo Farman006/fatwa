@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ask a Fatwa - Sunni Hanfi Fatwas</title>
+  <link rel="stylesheet" href="ask a fatwa.css" />
+</head>
+<body class="light">
+  <div class="login-container">
+    <h2>Ask a Fatwa</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Your Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="question">Your Question</label>
+        <textarea id="question" rows="5" placeholder="Type your fatwa question here..." required></textarea>
+      </div>
+
+      <button type="submit" class="login-btn">Submit Fatwa Request</button>
+    </form>
+
+    <div class="toggle-theme">
+      <span>Switch to </span>
+      <button id="themeToggle">Dark Mode</button>
+    </div>
+  </div>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      themeToggle.textContent = body.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
+    });
+  </script>
+</body>
+</html>

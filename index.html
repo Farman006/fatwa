@@ -1,0 +1,280 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Authentic Sunni Hanfi Fatwas from trusted scholars. Read in Urdu, Arabic, English and Roman Urdu.">
+<meta name="keywords" content="Sunni Fatwas, Hanfi Fatawa, Islamic Questions, Quran, Hadith, Urdu Fatawa, Islamic Rulings">
+<meta name="author" content="Sunni Hanfi Fatawas Team">
+
+  <title>Sunni Hanfi Fatawas</title>
+
+  <!-- Inter Font Import from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Your existing CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Mobile: Hide header search bar by default, show when .show-mobile-search is present */
+    @media (max-width: 768px) {
+      .header-search-bar {
+        display: none;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        width: 100vw;
+        background: var(--header-bg, #fff);
+        z-index: 100;
+        padding: 12px 16px 10px 16px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        border-bottom: 1px solid #eee;
+        align-items: center;
+        gap: 8px;
+      }
+      .header-search-bar.show-mobile-search {
+        display: flex;
+        animation: fadeInDown 0.25s;
+      }
+      .header-search-bar input.header-search-input {
+        flex: 1;
+        font-size: 1rem;
+        padding: 10px 12px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        background: var(--input-bg, #f9f9f9);
+        color: var(--text-color, #222);
+        outline: none;
+        transition: border 0.2s;
+      }
+      .header-search-bar input.header-search-input:focus {
+        border: 1.5px solid #4b8bfa;
+      }
+      .header-search-bar .header-search-btn {
+        background: #4b8bfa;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 12px;
+        margin-left: 8px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transition: background 0.2s;
+      }
+      .header-search-bar .header-search-btn:hover {
+        background: #2563eb;
+      }
+      @keyframes fadeInDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="header-glow"></div> <!-- Glow placed before header -->
+
+  <header class="header">
+  <div class="container"> 
+    <div class="logo">Sunni Hanfi Fatawas</div>
+
+    <!-- Desktop: Full Search Bar -->
+    <div class="header-search-bar">
+      <input type="text" class="header-search-input" placeholder="Search fatwas..." />
+      <button class="header-search-btn" aria-label="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" class="search-icon" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.08-1.57 4.21l5.68 5.68a1 1 0 0 1-1.42 1.42l-5.68-5.68A6.5 6.5 0 1 1 9.5 3m0 2a4.5 4.5 0 1 0 0 9a4.5 4.5 0 0 0 0-9Z" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="right-section">
+      <!-- Mobile: Icon Button -->
+      <button class="header-search-icon-btn" aria-label="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" class="search-icon" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.08-1.57 4.21l5.68 5.68a1 1 0 0 1-1.42 1.42l-5.68-5.68A6.5 6.5 0 1 1 9.5 3m0 2a4.5 4.5 0 1 0 0 9a4.5 4.5 0 0 0 0-9Z" />
+        </svg>
+      </button>
+      <!-- Hamburger Button -->
+      <button class="hamburger" id="menuToggle" aria-label="Toggle Menu">☰</button>
+      <!-- Nav Menu -->
+      <nav id="navMenu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="ask a fatwa.html">Ask a Fatwa</a></li>
+          <li><a href="#">Farz Uloom</a></li>
+          <li><a href="#">Ikhtilafat</a></li>
+          <li><a href="#">Books</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- Dark Mode Toggle (desktop: nav ke baad, mobile: order se control) -->
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+        <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M21.64 13a9 9 0 01-11.63-11.63A9 9 0 1021.64 13z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+  <div class="donation-banner">
+    <p>
+      Support the mission of spreading authentic Sunni Hanfi fatawas. Your contribution helps us grow.
+    </p>
+    <a href="#" class="donate-btn">Donate Now</a>
+  </div>
+
+  <main class="main-content">
+    <section class="hero-intro">
+      <h2>
+        The Ultimate <span class="gradient-text">Fatawas</span> Library for Modern Learners
+      </h2>
+      <p class="subtext">
+        Gain guidance from the fatwas of the Qur'an and Sunnah — with the support of trusted scholars of Ahl-e-Sunnat
+      </p>
+
+      <!-- Centered Search Bar -->
+      <div class="center-search-wrapper">
+  <div class="center-search-bar">
+    <input type="text" placeholder="Search fatwas..." class="center-search-input" />
+    <button class="center-search-btn">
+      <!-- Search Icon (SVG) -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="search-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+
+   <section class="features fade-in-up delay-3">
+  <h2>Categories</h2>
+  <div class="feature-cards">
+  <div class="card"><h3>Taharat</h3><p>Purity & cleanliness related rulings.</p></div>
+  <div class="card"><h3>Namaz</h3><p>Rules for daily, missed and special prayers.</p></div>
+  <div class="card"><h3>Roza (Fasting)</h3><p>Masail related to Ramadan and other fasts.</p></div>
+  <div class="card"><h3>Zakat</h3><p>Charity and financial purification rules.</p></div>
+  <div class="card"><h3>Hajj & Umrah</h3><p>Pilgrimage masail and procedures.</p></div>
+  <div class="card"><h3>Nikah</h3><p>Marriage, talaq and related rulings.</p></div>
+  <div class="card"><h3>Talaq</h3><p>Divorce rules and Islamic procedure.</p></div>
+  <div class="card"><h3>Inheritance (Meerath)</h3><p>Islamic division of property after death.</p></div>
+  <div class="card"><h3>Business & Trade</h3><p>Halal and haram in transactions.</p></div>
+  <div class="card"><h3>Loans & Interest</h3><p>Islamic view on debts and riba.</p></div>
+  <div class="card"><h3>Aqeedah</h3><p>Beliefs of Ahl-e-Sunnat wal Jamaat.</p></div>
+  <div class="card"><h3>Bid'at & Shirk</h3><p>Innovation and polytheism clarifications.</p></div>
+  <div class="card"><h3>Dawat o Tableegh</h3><p>Rules for preaching & propagation.</p></div>
+  <div class="card"><h3>Women Issues</h3><p>Masail specific to women in Islam.</p></div>
+  <div class="card"><h3>Children</h3><p>Birth, naming, education & upbringing.</p></div>
+  <div class="card"><h3>Wazaif & Taweez</h3><p>Permissible ruqyah and spiritual guidance.</p></div>
+  <div class="card"><h3>Qurbani</h3><p>Animal sacrifice & Eid-ul-Adha masail.</p></div>
+  <div class="card"><h3>Janaza</h3><p>Funeral, burial, and mourning procedures.</p></div>
+  <div class="card"><h3>Celebrations</h3><p>Milad, Urs and other Islamic events.</p></div>
+  <div class="card"><h3>Modern Issues</h3><p>Topics like AI, crypto, media, etc.</p></div>
+  <div class="card"><h3>Islamic Calendar</h3><p>Moon sighting, Islamic months & dates.</p></div>
+  <div class="card"><h3>Prayer Times</h3><p>Salah timing, zones and adjustments.</p></div>
+  <div class="card"><h3>Dream Interpretation</h3><p>Islamic meanings of dreams.</p></div>
+  <div class="card"><h3>Halal & Haram</h3><p>Food, lifestyle and entertainment rulings.</p></div>
+  <div class="card"><h3>Health & Medicine</h3><p>Modern medical masail in Shari'ah.</p></div>
+  <div class="card"><h3>Islamic Dress Code</h3><p>Rules for men & women clothing.</p></div>
+  <div class="card"><h3>Political Issues</h3><p>Islamic stance on governance and politics.</p></div>
+  <div class="card"><h3>Jihad & Defence</h3><p>Rules and principles in Islam.</p></div>
+  <div class="card"><h3>Non-Muslim Interaction</h3><p>Deals with interfaith and tolerance.</p></div>
+  <div class="card"><h3>Education</h3><p>Islamic schooling and knowledge seeking.</p></div>
+  <div class="card"><h3>Fiqh Terminology</h3><p>Definitions of Islamic legal terms.</p></div>
+  <div class="card"><h3>Miscellaneous</h3><p>Other general Islamic rulings.</p></div>
+</div>
+
+</section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Sunni Hanfi Fatawas. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Theme Toggle
+    const toggle = document.getElementById("theme-toggle");
+    function setTheme(mode) {
+      const isDark = mode === "dark";
+      document.body.classList.toggle("dark", isDark);
+      localStorage.setItem("theme", mode);
+    }
+    toggle.addEventListener("click", () => {
+      const isDark = document.body.classList.contains("dark");
+      setTheme(isDark ? "light" : "dark");
+      toggle.classList.add("rotate");
+      setTimeout(() => toggle.classList.remove("rotate"), 400);
+    });
+    const savedTheme = localStorage.getItem("theme") || "light";
+    setTheme(savedTheme);
+
+    // Hamburger Menu
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
+
+    // Fatwa Category Search Logic
+    function filterFatwaCards(val) {
+      const cards = document.querySelectorAll('.feature-cards .card');
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        card.style.display = text.includes(val) ? '' : 'none';
+      });
+    }
+    // Center search bar
+    const centerSearchInput = document.querySelector('.center-search-input');
+    if (centerSearchInput) {
+      centerSearchInput.addEventListener('input', function() {
+        filterFatwaCards(this.value.toLowerCase());
+      });
+    }
+    // Header search bar
+    const headerSearchInput = document.querySelector('.header-search-input');
+    if (headerSearchInput) {
+      headerSearchInput.addEventListener('input', function() {
+        filterFatwaCards(this.value.toLowerCase());
+      });
+    }
+
+    // Mobile: Toggle header search bar on search icon click
+const headerSearchIconBtn = document.querySelector('.header-search-icon-btn');
+const headerSearchBar = document.querySelector('.header-search-bar');
+function isMobileView() {
+  return window.matchMedia('(max-width: 768px)').matches;
+}
+if (headerSearchIconBtn && headerSearchBar) {
+  headerSearchIconBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    if (isMobileView()) {
+      headerSearchBar.classList.toggle('show-mobile-search');
+      if (headerSearchBar.classList.contains('show-mobile-search')) {
+        headerSearchInput && headerSearchInput.focus();
+      }
+    }
+  });
+  // Optional: Hide search bar when clicking outside or resizing to desktop
+  document.addEventListener('click', function(e) {
+    if (isMobileView() && headerSearchBar.classList.contains('show-mobile-search')) {
+      if (!headerSearchBar.contains(e.target) && !headerSearchIconBtn.contains(e.target)) {
+        headerSearchBar.classList.remove('show-mobile-search');
+      }
+    }
+  });
+  window.addEventListener('resize', function() {
+    if (!isMobileView()) {
+      headerSearchBar.classList.remove('show-mobile-search');
+    }
+  });
+}
+  </script>
+</body>
+</html>
